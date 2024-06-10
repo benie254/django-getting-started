@@ -28,3 +28,22 @@ Think of a **virtual environment** as a container to store all the packages/libr
 - It also helps you avoid overloading your project with the other installed packages, which you may not need/want to use in the project.
 
 Learn more about a **Python virtual environment** in the official [Python documentation](https://docs.python.org/3/library/venv.html).
+
+#### i. Create a virtual environment
+
+In your code editor's workspace, take the following steps to create a virtual environment:
+
+- Open your terminal and run the following command:
+
+  ```
+  virtualenv venv
+  ```
+
+  ![image](https://github.com/benie254/django-getting-started/assets/99865051/4bd3cec8-d3ad-420b-8467-5648daad20cf)
+
+- Let's break down the command:
+  - `virtualenv` is the section of the command that triggers the creation of the virtual environment.
+  - `venv` is the (conventional) name of your virtual environment. You may name it anything relevant like `env` or whatever you'll prefer.
+- If you're following this guide step-by-step, you will notice a new folder titled `venv` created in the root directory of your workspace.
+
+  ![image](https://github.com/benie254/django-getting-started/assets/99865051/59f7df33-ab51-46af-953e-efefbad26a85)
