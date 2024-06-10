@@ -157,3 +157,11 @@ Take the step below to create a Django project.
   - The files you will mostly interract with are:
     - `settings.py`: contains the project's configurations, which will be applied to any/all application(s) installed/created.
     - `urls.py`: contains the url configurations that connect an application to the project. This is one of the ways that the project communicates with each application connected to it. In the context of APIs, this file defines base URLs which all other URL endpoints will connect to.
+
+### C. A Django App
+
+A Django App contains logic and configurations that the application requires to render a HTML template, send email messages, or build APIs. But there is so much more you can do with a Django app. On its own, this application cannot run successfully. It has to be hooked or linked to a Django project.
+
+- And while a project can contain more than one app, I do not recommend having more than one project within your Django workspace.
+
+Learn more about Django applications in the official [Django documentation](https://docs.djangoproject.com/).
