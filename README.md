@@ -69,3 +69,10 @@ You should keep the size of your remote repository as light as possible, and pus
 You should also keep sensitive information/data in your local system and not expose them to the public by pushing them to GitHub. A `gitignore` file comes handy in this case as well.
 
 You will add your virtual environment to `gitignore`. Later on, you will learn how to retrieve the packages/libraries stored in your virtual environment so that you can still access these `dependencies` even when you don't have access to the virtual environment that you created earlier on.
+
+#### i. Create a `gitignore` file
+
+If you don't have a `gitignore` file already, you will need to create one in the root directory of your workspace. Follow these steps:
+
+- Open your workspace's file explorer.
+- Manually create the `gitignore` file in the root directory of your workspace.
