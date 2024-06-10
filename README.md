@@ -58,23 +58,27 @@ After creating a virtual environment, you need to activate it before you can use
   ```
 - You may replace `venv` with the name you used when creating your virtual environment.
 
-### B. `gitignore`
+### B. `.gitignore`
 
-Before you can proceed with installing Django, you need to do one more thing: put the `gitignore` file to use.
+Before you can proceed with installing Django, you need to do one more thing: put the `.gitignore` file to use.
 
 A gitignore file stores all folders and files that you do not want to be pushed to your remote GitHub repository.
 
 You should keep the size of your remote repository as light as possible, and push only what is necessary to it.
 
-You should also keep sensitive information/data in your local system and not expose them to the public by pushing them to GitHub. A `gitignore` file comes handy in this case as well.
+You should also keep sensitive information/data in your local system and not expose them to the public by pushing them to GitHub. A `.gitignore` file comes handy in this case as well.
 
-You will add your virtual environment to `gitignore`. Later on, you will learn how to retrieve the packages/libraries stored in your virtual environment so that you can still access these `dependencies` even when you don't have access to the virtual environment that you created earlier on.
+You will add your virtual environment to `.gitignore`. Later on, you will learn how to retrieve the packages/libraries stored in your virtual environment so that you can still access these `dependencies` even when you don't have access to the virtual environment that you created earlier on.
 
-#### i. Create a `gitignore` file
+#### i. Create a `.gitignore` file
 
-If you don't have a `gitignore` file already, you will need to create one in the root directory of your workspace. Follow these steps:
+If you don't have a `.gitignore` file already, you will need to create one in the root directory of your workspace. Follow these steps:
 
 - Open your workspace's file explorer.
-- Manually create the `gitignore` file in the root directory of your workspace.
+- Manually create the `.gitignore` file in the root directory of your workspace.
 
   ![image](https://github.com/benie254/django-getting-started/assets/99865051/977da74a-1d21-4f6c-b62f-61d47ea8c710)
+
+- An alternative approach is to add a `.gitignore` file when creating your new GitHub repository:
+
+  ![image](https://github.com/benie254/django-getting-started/assets/99865051/dc6093cc-bda3-4702-a6fb-8136d3aeb789)
