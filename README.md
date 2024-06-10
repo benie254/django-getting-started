@@ -117,3 +117,43 @@ Take the steps below to install `django` in your virtual environmet.
   - It installs the latest, stable version of the `django` package, along with other libraries that `django` depends on to run.
 
     ![image](https://github.com/benie254/django-getting-started/assets/99865051/2a8285e1-11fe-49fc-8bbc-1117b1877a66)
+
+### B. A Django Project
+
+A Django Project contains the core settings and configurations that all Django **Apps** you will build will rely and run on. Think of it as a container for any/all Django application(s) you will create. But it is more than a "container".
+
+Learn more in the official [Django Documentation](https://docs.djangoproject.com/).
+
+#### i. Create a Django project
+
+Take the step below to create a Django project.
+
+- Run the following command:
+  ```
+  django-admin startproject django_proj .
+  ```
+- You may replace `django_proj` with your preferred name for your project.
+- Let's break down this command:
+
+  - `django-admin` is the section of the command that triggers the creation of either a **Django project** or a **Django app**.
+  - `startproject` is the section of the command that tells Django specifically what we want to create between the **project** and the **application**.
+  - `django_proj` is the name I chose for the project. You may call it anything relevant to what you're building.
+  - The period `.` I added at the end tells Django to create the project within the current folder (which in this case is the root folder of my workspace)
+
+    ![alt text](image.png)
+
+  - Without the period `.`, Django will create the project within a containing folder of the same name.
+
+    ![alt text](image-1.png)
+
+  - Either approach is okay, depending on how you want to manage your workspace.
+
+- What happens after the command?
+
+  - Django creates a folder containing files which all our applications will rely and run on.
+
+    ![alt text](image.png)
+
+  - The files you will mostly interract with are:
+    - `settings.py`: contains the project's configurations, which will be applied to any/all application(s) installed/created.
+    - `urls.py`: contains the url configurations that connect an application to the project. This is one of the ways that the project communicates with each application connected to it. In the context of APIs, this file defines base URLs which all other URL endpoints will connect to.
