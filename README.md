@@ -46,7 +46,7 @@ In your code editor's workspace, take the following steps to create a virtual en
   - `venv` is the (conventional) name of your virtual environment. You may name it anything relevant like `env` or whatever you'll prefer.
 - If you're following this guide step-by-step, you will notice a new folder titled `venv` created in the root directory of your workspace.
 
-  ![image](https://github.com/benie254/django-getting-started/assets/99865051/59f7df33-ab51-46af-953e-efefbad26a85)
+  ![image](https://github.com/benie254/django-getting-started/assets/99865051/468282d8-dbeb-417b-9945-17db0f3bbf46)
 
 #### ii. Activate your virtual environment
 
@@ -77,4 +77,4 @@ If you don't have a `gitignore` file already, you will need to create one in the
 - Open your workspace's file explorer.
 - Manually create the `gitignore` file in the root directory of your workspace.
 
-  ![image](https://github.com/benie254/django-getting-started/assets/99865051/27b82aee-dd4d-4af9-9be9-752d4e56f08c)
+  ![image](https://github.com/benie254/django-getting-started/assets/99865051/977da74a-1d21-4f6c-b62f-61d47ea8c710)
