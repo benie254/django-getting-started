@@ -76,3 +76,5 @@ If you don't have a `gitignore` file already, you will need to create one in the
 
 - Open your workspace's file explorer.
 - Manually create the `gitignore` file in the root directory of your workspace.
+
+  ![image](https://github.com/benie254/django-getting-started/assets/99865051/27b82aee-dd4d-4af9-9be9-752d4e56f08c)
