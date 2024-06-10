@@ -16,7 +16,7 @@ For the purposes of this guide, you will need:
 - [Python](https://www.python.org/) version 3 or higher installed in your system.
 - A [code editor](https://www.codecademy.com/resources/blog/popular-ides-and-code-editors/) e.g. [VSCode](https://code.visualstudio.com/).
 
-## 2. Initializing Django
+## 2. Initializing
 
 Before you can install Django and create a Django project or app, you will need to set up a **virtual environment**.
 
@@ -98,13 +98,13 @@ Now, add your virtual environment folder to `.gitignore`. Follow these steps:
 
   ![image](https://github.com/benie254/django-getting-started/assets/99865051/b70726aa-d469-41aa-b653-53d591403e49)
 
-### C. Setting Up Django
+## 3. Setting Up Django
 
 You are now ready to start installing packages/libraries for your project. The very first package will be `django`.
 
 Learn more about Django in the official [Django documentation](https://docs.djangoproject.com/).
 
-#### i. Install Django
+### A. Install Django
 
 Take the steps below to install `django` in your virtual environmet.
 
