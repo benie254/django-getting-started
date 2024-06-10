@@ -57,3 +57,15 @@ After creating a virtual environment, you need to activate it before you can use
   source venv/bin/activate
   ```
 - You may replace `venv` with the name you used when creating your virtual environment.
+
+### B. `gitignore`
+
+Before you can proceed with installing Django, you need to do one more thing: put the `gitignore` file to use.
+
+A gitignore file stores all folders and files that you do not want to be pushed to your remote GitHub repository.
+
+You should keep the size of your remote repository as light as possible, and push only what is necessary to it.
+
+You should also keep sensitive information/data in your local system and not expose them to the public by pushing them to GitHub. A `gitignore` file comes handy in this case as well.
+
+You will add your virtual environment to `gitignore`. Later on, you will learn how to retrieve the packages/libraries stored in your virtual environment so that you can still access these `dependencies` even when you don't have access to the virtual environment that you created earlier on.
