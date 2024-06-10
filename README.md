@@ -47,3 +47,13 @@ In your code editor's workspace, take the following steps to create a virtual en
 - If you're following this guide step-by-step, you will notice a new folder titled `venv` created in the root directory of your workspace.
 
   ![image](https://github.com/benie254/django-getting-started/assets/99865051/59f7df33-ab51-46af-953e-efefbad26a85)
+
+#### ii. Activate your virtual environment
+
+After creating a virtual environment, you need to activate it before you can use it to store libraries/packages that you will install.
+
+- Run the following command to activate your virtual environment:
+  ```
+  source venv/bin/activate
+  ```
+- You may replace `venv` with the name you used when creating your virtual environment.
