@@ -118,13 +118,42 @@ Take the steps below to install `django` in your virtual environmet.
 
     ![image](https://github.com/benie254/django-getting-started/assets/99865051/2a8285e1-11fe-49fc-8bbc-1117b1877a66)
 
-### B. A Django Project
+### B. `.env`
+
+An environment file, `.env`, is the home for all sensitive information/data within your workspace.
+
+I recommend that you do not expose or make publicly available, any sensitive information, including but not limited to:
+
+- Credentials (e.g. username and/or password).
+- Tokens (e.g. access token).
+- Security/Secret keys
+- Hosts of your project
+
+The contents of a `.env` file are referred to as **environment variables**.
+
+#### i. Create a `.env` file
+
+In the root directory of your workspace, follow the step below:
+
+- Manually create a `.env` file
+- Add the following **environment variable**:
+  ```
+  MODE='dev'
+  ```
+- The variable above determines whether your project is in `development` or `production` mode.
+- Whenever you're working locally, remember to set this variable's value to `dev`. You will learn later on more ways that you can use this variable.
+
+You will also use the `.env` file more extensively later on.
+
+### C. A Django Project
 
 A Django Project contains the core settings and configurations that all Django **Apps** you will build will rely and run on. Think of it as a container for any/all Django application(s) you will create. But it is more than a "container".
 
 Learn more in the official [Django Documentation](https://docs.djangoproject.com/).
 
 #### i. Create a Django project
+
+**Important:** If you've been committing and pushing your changes to GitHub, please **do not** commit and push any changes after creating your Django project yet.
 
 Take the step below to create a Django project.
 
@@ -158,7 +187,96 @@ Take the step below to create a Django project.
     - `settings.py`: contains the project's configurations, which will be applied to any/all application(s) installed/created.
     - `urls.py`: contains the url configurations that connect an application to the project. This is one of the ways that the project communicates with each application connected to it. In the context of APIs, this file defines base URLs which all other URL endpoints will connect to.
 
-### C. A Django App
+**Remember:** Do not commit and push any changes to GitHub yet. Check out **(ii)**, **(iii)**, and **(iv)** below for more information.
+
+#### ii. Install `python-decouple`
+
+After storing any sensitive information in the environment file `.env`, you will need a way to retrieve this information. The `python-decouple` package/library enables you to do this seamlessly.
+
+- Run the following command to install python-decouple:
+
+  ```
+  pip install python-decouple
+  ```
+
+#### iii. Import `config`
+
+The package/library `python-decouple` that you installed in **(ii)** above exposes a variable called `config`, which you can use to retrieve **environment variables**.
+
+Follow these steps to import `config` in your Django project:
+
+- Open your project's `settings.py` file, which you will find here:
+  - `django_proj/settings.py`
+  - If you have a different name for your Django project, open its folder, and you will find the `settings.py` file there.
+- At the top of the `settings.py` file, you will see the following default import:
+  ```
+  from pathlib import Path
+  ```
+- Just below this import, add a new line and type or paste the following:
+  ```
+  from decouple import config
+  ```
+- Your project's `settings.py` file should now have the following imports at the top of the file:
+  ```
+  from pathlib import Path
+  from decouple import config
+  ```
+- Now, whenever you want to retrieve an environment variable, you can always type:
+  ```
+  config('NAME_OF_THE_ENVIRONMENT_VARIABLE')
+  ```
+
+#### iv. Store Your Secret Key in `.env`
+
+You still need to do something in your project's `settings.py` file.
+
+A **secret key** in Django is used to secure signed data. This is one of the sensitive information that you shouldn't make publicly available.
+
+Follow the steps below to secure your `secret key`:
+
+- If you already exited your project's `settings.py` file, open it.
+- In the `settings.py` file, locate the configuration titled `SECRET_KEY`.
+  ```
+  SECRET_KEY = 'theValueOfYourSecretKeyWillBeHere'
+  ```
+- Cut/copy the value of the `SECRET_KEY` configuration and replace it with the following:
+  ```
+  config('SECRET_KEY')
+  ```
+- Therefore, before you had:
+  ```
+  SECRET_KEY = 'theValueOfYourSecretKeyWillBeHere'
+  ```
+- And now you should have:
+  ```
+  SECRET_KEY = config('SECRET_KEY')
+  ```
+- This tells Django to retrieve the value of the secret key from your environment file, and that the variable which contains the value of this secret key is titled `SECRET_KEY`.
+
+Now that you have the value of the `SECRET_KEY` configuration in your clipboard, follow the steps below to store this value in your `.env` file:
+
+- Open your `.env` file at the root folder of your workspace.
+- In a new line, type or paste the following **(without leaving any trailing spaces)**:
+  ```
+  SECRET_KEY='pasteOrEnterTheValueOfTheSecretKey'
+  ```
+- Replace `pasteOrEnterTheValueOfTheSecretKey` with the value of the `SECRET_KEY` that you cut/copied from your project's `settings.py` file.
+- Therefore, if before, in your project's `settings.py` file you had the value of the `SECRET_KEY` as:
+  ```
+  SECRET_KEY = '12345'
+  ```
+- It should now be:
+  ```
+  SECRET_KEY = config('SECRET_KEY')
+  ```
+- And in your `.env` file, you should now have:
+  ```
+  SECRET_KEY='12345'
+  ```
+
+Once you've followed the steps above, you may commit and push your changes. Your project's **SECRET_KEY** is stored securely in your local `.env` file, which will not be pushed to or accessible on GitHub.
+
+### D. A Django App
 
 A Django App contains logic and configurations that the application requires to render a HTML template, send email messages, or build APIs. But there is so much more you can do with a Django app. On its own, this application cannot run successfully. It has to be hooked or linked to a Django project.
 
